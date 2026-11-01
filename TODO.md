@@ -15,6 +15,7 @@
 - The website name and page title are exactly `16.5 Sex Hormones in Humans and 16.6 Sexually Transmitted Infections`.
 - The UI is clean, modern, responsive, and readable on desktop, tablet, and mobile.
 - The supplied Word-document pictures are extracted, reused at the relevant lesson points, and displayed as large as the responsive article width permits.
+- The attached 16.5 and 16.6 PowerPoint diagrams are also extracted and displayed between the concise Core and Extended content blocks at their relevant lesson points.
 - Visible typography uses a minimum 20px size.
 - A sticky desktop sidebar and mobile navigation drawer show the chronological chapter flow.
 

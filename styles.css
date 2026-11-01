@@ -71,7 +71,7 @@ button { cursor: pointer; }
 
 .content { min-width: 0; padding: 0 46px; }
 .hero { max-width: var(--content); margin: 0 auto; min-height: 440px; position: relative; border-bottom: 1px solid var(--line); padding: 72px 0 58px; overflow: hidden; }
-.hero-image { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(16,44,75,.98) 0%, rgba(16,44,75,.82) 31%, rgba(16,44,75,.08) 74%), url('/source-images/image1.png') center/cover no-repeat; border-radius: 0 0 20px 20px; }
+.hero-image { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(16,44,75,.98) 0%, rgba(16,44,75,.82) 31%, rgba(16,44,75,.08) 74%), url('/ppt-images/image-1-2.png') center/cover no-repeat; border-radius: 0 0 20px 20px; }
 .hero-copy { position: relative; z-index: 1; max-width: 550px; color: white; padding: 20px 0 0 42px; }
 .hero-copy .eyebrow { color: var(--lime); }
 .hero h1 { margin: 17px 0 17px; font: 700 clamp(2.45rem, 5vw, 4.6rem)/.98 "Space Grotesk", sans-serif; letter-spacing: -.075em; }

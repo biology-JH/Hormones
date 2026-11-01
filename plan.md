@@ -1,7 +1,7 @@
 # 16.5 Sex Hormones in Humans and 16.6 Sexually Transmitted Infections — implementation plan
 
 ## Product scope
-The website is a self-contained, static educational site built from the uploaded Word guide. It uses the exact name `16.5 Sex Hormones in Humans and 16.6 Sexually Transmitted Infections`, keeps the guide's order, presents concise explanations, and turns its tables, diagrams, and exam tips into an interactive eight-session learning path.
+The website is a self-contained, static educational site built from the uploaded Word guide and the attached PowerPoints `16.5SexHormonesandReproduction.pptx` and `16.6Sexually-Transmitted-Infections.pptx`. It uses the exact name `16.5 Sex Hormones in Humans and 16.6 Sexually Transmitted Infections`, keeps the guide's order, presents concise explanations, and uses the supplied PowerPoint diagrams as the primary teaching visuals.
 
 ## Design direction
 
@@ -29,7 +29,7 @@ The website is a self-contained, static educational site built from the uploaded
 - `styles.css`: responsive editorial system, CORE/EXTENDED badges, contextual visual cards, feedback states, focus styles, and reduced-motion rules.
 - `script.js`: source-grounded session data, chapter navigation, question grading, score counter, progress tracking, mobile nav drawer, and session-scoped reflection state.
 - `public/manus-routes.json`: static route manifest for the root page.
-- `public/source-images/image1.png` through `image6.png`: extracted pictures from the uploaded Word document, reused as the large hero and contextual lesson visuals.
+- `public/ppt-images/` and `public/ppt-sti-images/`: extracted slide and diagram visuals from both attached PowerPoints, used as the hero and large in-context lesson images.
 
 ## Chronological curriculum
 1. Puberty and secondary sexual characteristics (Core).

@@ -193,16 +193,16 @@ const chapterListEl = document.querySelector("#chapter-list");
 
 function paragraphize(items) { return items.map(item => `<p>${item}</p>`).join(""); }
 const sourceImages = {
-  1: ["/source-images/image2.png", null],
-  2: ["/source-images/image3.png", null, null],
-  3: ["/source-images/image4.png", "/source-images/image5.png", null],
-  4: [null, null, null],
-  5: ["/source-images/image6.png", null],
-  6: ["/source-images/image6.png", null],
-  7: [null, null, null],
-  8: [null, null, null]
+  1: ["/ppt-images/image-6-2.png"],
+  2: ["/ppt-images/image-9-2.png", "/ppt-images/image-9-3.png", "/ppt-images/image-9-4.png"],
+  3: ["/ppt-images/image-14-2.png", "/ppt-images/image-16-2.png"],
+  4: ["/ppt-images/image-18-2.png"],
+  5: ["/ppt-sti-images/image-1-2.jpg", "/ppt-sti-images/image-11-2.png"],
+  6: ["/ppt-sti-images/image-12-2.png"],
+  7: ["/ppt-sti-images/image-17-2.png"],
+  8: ["/ppt-sti-images/image-25-2.png", "/ppt-sti-images/image-11-2.png"]
 };
-function renderVisuals(items, sessionId) { return items.map((item, index) => { const image = sourceImages[sessionId]?.[index]; return `<div class="visual-placeholder"><div class="placeholder-inner">${image ? `<img class="source-visual" src="${image}" alt="Biology diagram or picture" />` : ""}<div>${image ? "" : `<h4>${item}</h4>`}</div></div></div>`; }).join(""); }
+function renderVisuals(items, sessionId) { return (sourceImages[sessionId] || []).map(image => `<div class="visual-placeholder"><div class="placeholder-inner"><img class="source-visual" src="${image}" alt="Biology slide diagram" /></div></div>`).join(""); }
 function renderQuestions(questions, sessionId) { return questions.map((q, index) => {
   const qid = `s${sessionId}q${index}`;
   if (q.type === "short") return `<article class="question-card" data-question="${qid}" data-answer="${q.answers.join("|")}"><span class="question-label">Check ${index + 1} · short answer</span><p class="question-prompt">${q.prompt}</p><div class="short-answer"><input aria-label="Answer for check ${index + 1}" data-input="${qid}" /><button type="button" data-submit="${qid}">Check</button></div><div class="feedback" data-feedback="${qid}" role="status"></div></article>`;
@@ -211,9 +211,9 @@ function renderQuestions(questions, sessionId) { return questions.map((q, index)
 function renderSession(session) {
   return `<section class="session" id="session-${session.id}" data-session="${session.id}">
     <div class="session-heading"><div class="session-number">0${session.id}</div><div><div class="eyebrow">Session ${session.id} · ${session.id <= 2 || session.id >= 5 ? "core" : "extended"}</div><h2 class="session-title">${session.title}</h2><p class="session-deck">${session.deck}</p></div><div class="session-status"><button class="complete-toggle" type="button" data-complete="${session.id}" aria-pressed="false"><span class="checkmark">✓</span><span>Mark complete</span></button></div></div>
-    <div class="content-block core-block"><div class="block-heading"><h3>Detailed content</h3><span class="badge badge-core">${session.id <= 2 || session.id >= 5 ? "CORE" : "EXTENDED"}</span></div><div class="rich-copy">${paragraphize(session.core)}</div></div>
-    <div class="content-block extended-block"><div class="block-heading"><h3>Stretch the model</h3><span class="badge badge-extended">EXTENDED</span></div><div class="rich-copy"><p>${session.extended}</p></div></div>
+    <div class="content-block core-block"><div class="block-heading"><h3>Core</h3><span class="badge badge-core">CORE</span></div><div class="rich-copy">${paragraphize(session.core.slice(0, 1))}</div></div>
     ${renderVisuals(session.visuals, session.id)}
+    <div class="content-block extended-block"><div class="block-heading"><h3>Extended</h3><span class="badge badge-extended">EXTENDED</span></div><div class="rich-copy"><p>${session.extended}</p></div></div>
     <div class="practice"><div class="practice-heading"><div><span class="section-kicker">Retrieval practice</span><h3>Make the biology do some work.</h3></div><span class="practice-score" data-session-score="${session.id}">0 / ${session.questions.length} correct</span></div><div class="question-list">${renderQuestions(session.questions, session.id)}</div></div>
   </section>`;
 }
