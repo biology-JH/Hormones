@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LearnLane is a guided web development foundations course: trace the web, build accessible interfaces, and ship a small site." />
+  <title>LearnLane | Web Development Foundations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to course content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="LearnLane home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><b></b></span>
+        <span>learn<span>lane</span></span>
+      </a>
+      <div class="header-actions">
+        <div class="score-pill" aria-live="polite"><span class="score-dot"></span><span id="score-value">0</span> / <span id="score-total">24</span> correct</div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="course-nav"><span></span><span></span><span></span><span class="sr-only">Open course navigation</span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-shell" id="top">
+    <aside class="course-rail" id="course-nav" aria-label="Course chapters">
+      <div class="rail-intro">
+        <div class="eyebrow">Web foundations · 8 sessions</div>
+        <h2>Build the mental model, then build the site.</h2>
+        <p>Follow the path in order. Each chapter unlocks a new layer of the browser.</p>
+      </div>
+      <div class="progress-block">
+        <div class="progress-label"><span>Your path</span><strong id="progress-label">0 / 8 complete</strong></div>
+        <div class="progress-track"><span id="progress-bar"></span></div>
+      </div>
+      <nav class="chapter-nav" id="chapter-list"></nav>
+      <div class="rail-legend"><span class="badge badge-core">CORE</span><span>must know</span><span class="badge badge-extended">EXTENDED</span><span>stretch</span></div>
+    </aside>
+
+    <main class="content" id="main-content">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-image" role="img" aria-label="A calm desk with a laptop and web-development sketches"></div>
+        <div class="hero-copy">
+          <div class="eyebrow">A chronological studio course</div>
+          <h1 id="page-title">Web development,<br /><em>one layer at a time.</em></h1>
+          <p>Learn how the browser turns ideas into interfaces. Read the model, try the move, explain it back — then carry that understanding into the next session.</p>
+          <a class="hero-cta" href="#session-1">Start with the request <span>↓</span></a>
+        </div>
+        <div class="hero-note"><span class="note-line"></span><span>8 chapters · 24 practice checks</span></div>
+      </section>
+
+      <div class="course-intro">
+        <div><span class="section-kicker">The learning contract</span><h2>Understand first. Build second.</h2></div>
+        <p>Every session follows the same rhythm so your attention can stay on the idea: objective, activation, deep dive, practice, reflection. CORE is the route to competence; EXTENDED is where you stretch the model.</p>
+      </div>
+
+      <div id="sessions"></div>
+
+      <footer class="site-footer">
+        <div class="footer-mark"><span class="brand-mark" aria-hidden="true"><i></i><i></i><b></b></span><strong>learnlane</strong></div>
+        <p>Made for curious builders. Keep the browser open; keep asking why.</p>
+        <a href="#top">Back to the start ↑</a>
+      </footer>
+    </main>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>
