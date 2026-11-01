@@ -43,14 +43,14 @@ button { cursor: pointer; }
 .score-pill { font-size: .79rem; font-weight: 700; color: var(--ink-soft); letter-spacing: .01em; }
 .score-dot { width: 8px; height: 8px; display: inline-block; border-radius: 50%; background: var(--coral); margin-right: 7px; }
 .menu-toggle { display: none; border: 0; background: transparent; padding: 8px; }
-.menu-toggle span:not(.sr-only) { display: block; width: 22px; height: 2px; margin: 4px 0; background: var(--ink); }
+.menu-toggle span:not(.sr-only) { display: block; width: 20px; height: 2px; margin: 4px 0; background: var(--ink); }
 
 .app-shell { display: grid; grid-template-columns: var(--rail) minmax(0, 1fr); max-width: 1440px; margin: 0 auto; }
 .course-rail { position: sticky; top: 74px; align-self: start; height: calc(100vh - 74px); padding: 42px 26px 28px 38px; border-right: 1px solid var(--line); overflow-y: auto; background: var(--paper); }
 .eyebrow, .section-kicker, .objective-label, .question-label, .mini-label { text-transform: uppercase; letter-spacing: .14em; font-size: .66rem; font-weight: 700; color: var(--coral); }
 .rail-intro h2 { font: 700 1.12rem/1.2 "Space Grotesk", sans-serif; letter-spacing: -.035em; margin: 10px 0 9px; }
 .rail-intro p { font-size: .78rem; line-height: 1.55; margin: 0; color: var(--ink-soft); }
-.progress-block { margin: 32px 0 22px; }
+.progress-block { margin: 32px 0 20px; }
 .progress-label { display: flex; justify-content: space-between; gap: 8px; font-size: .68rem; color: var(--ink-soft); margin-bottom: 8px; }
 .progress-label strong { color: var(--ink); }
 .progress-track { background: #dde3df; height: 7px; border-radius: 99px; overflow: hidden; }
@@ -71,8 +71,8 @@ button { cursor: pointer; }
 
 .content { min-width: 0; padding: 0 46px; }
 .hero { max-width: var(--content); margin: 0 auto; min-height: 440px; position: relative; border-bottom: 1px solid var(--line); padding: 72px 0 58px; overflow: hidden; }
-.hero-image { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(16,44,75,.98) 0%, rgba(16,44,75,.82) 31%, rgba(16,44,75,.08) 74%), url('/source-images/image1.png') center/cover no-repeat; border-radius: 0 0 22px 22px; }
-.hero-copy { position: relative; z-index: 1; max-width: 550px; color: white; padding: 22px 0 0 42px; }
+.hero-image { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(16,44,75,.98) 0%, rgba(16,44,75,.82) 31%, rgba(16,44,75,.08) 74%), url('/source-images/image1.png') center/cover no-repeat; border-radius: 0 0 20px 20px; }
+.hero-copy { position: relative; z-index: 1; max-width: 550px; color: white; padding: 20px 0 0 42px; }
 .hero-copy .eyebrow { color: var(--lime); }
 .hero h1 { margin: 17px 0 17px; font: 700 clamp(2.45rem, 5vw, 4.6rem)/.98 "Space Grotesk", sans-serif; letter-spacing: -.075em; }
 .hero h1 em { color: var(--lime); font-style: normal; }
@@ -105,7 +105,7 @@ button { cursor: pointer; }
 .objective.why { border-top: 3px solid var(--coral); }
 .objective.how { border-top: 3px solid var(--lime); }
 
-.starter, .plenary { padding: 19px 22px; border-radius: 13px; background: var(--ink); color: white; margin: 0 0 33px; position: relative; overflow: hidden; }
+.starter, .plenary { padding: 19px 20px; border-radius: 13px; background: var(--ink); color: white; margin: 0 0 33px; position: relative; overflow: hidden; }
 .starter::after, .plenary::after { content: "?"; position: absolute; right: 20px; top: -18px; font: 700 7.5rem/.9 "Space Grotesk", sans-serif; color: rgba(255,255,255,.06); }
 .plenary { background: var(--blue-soft); color: var(--ink); }
 .plenary::after { content: "✓"; color: rgba(16,44,75,.07); }
@@ -152,13 +152,13 @@ button { cursor: pointer; }
 @media (max-width: 540px) { .score-pill { font-size: .68rem; }.hero h1 { font-size: 2.65rem; }.hero-copy p { font-size: .88rem; }.hero-image { background-position: 62% center; }.placeholder-inner { align-items: flex-start; flex-direction: column; }.practice-heading { align-items: flex-start; flex-direction: column; gap: 4px; }.short-answer { flex-direction: column; gap: 7px; }.short-answer button { padding: 9px 13px; }.site-footer { display: grid; justify-content: stretch; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; }.chapter-link, .progress-track span, .course-rail { transition: none; } }
 
-/* User-requested reading scale: every visible text element is at least 22px. */
-body { font-size: 22px; }
+/* User-requested reading scale: every visible text element is at least 20px. */
+body { font-size: 20px; }
 .brand, .footer-mark, .score-pill, .eyebrow, .section-kicker, .objective-label, .question-label, .mini-label,
 .rail-intro p, .progress-label, .chapter-link, .rail-legend, .badge, .hero-copy p, .hero-cta, .hero-note,
 .course-intro p, .session-deck, .complete-toggle, .objective p, .starter p, .plenary p, .rich-copy,
 .visual-placeholder p, .practice-score, .option, .short-answer input, .short-answer button, .feedback, .check-row,
-.exit-ticket, .site-footer, .site-footer a { font-size: 22px; }
+.exit-ticket, .site-footer, .site-footer a { font-size: 20px; }
 .rail-intro h2 { font-size: 25px; }
 .hero h1 { font-size: clamp(2.7rem, 5vw, 5rem); }
 .course-intro h2 { font-size: 34px; }
@@ -171,10 +171,10 @@ body { font-size: 22px; }
 .placeholder-inner { max-width: none; display: block; }
 .placeholder-icon { width: 58px; height: 58px; font-size: 26px; margin-bottom: 16px; }
 .source-visual { display: block; width: 100%; height: auto; max-height: 760px; object-fit: contain; object-position: center; margin: 20px 0 26px; border-radius: 12px; background: rgba(255,255,255,.78); }
-.source-visual-caption { margin: 0; color: var(--ink-soft); font-size: 22px; line-height: 1.45; }
+.source-visual-caption { margin: 0; color: var(--ink-soft); font-size: 20px; line-height: 1.45; }
 @media (max-width: 540px) {
   .hero h1 { font-size: 42px; }
-  .hero-copy p, .course-intro p, .session-deck, .rich-copy, .starter p, .plenary p { font-size: 22px; }
+  .hero-copy p, .course-intro p, .session-deck, .rich-copy, .starter p, .plenary p { font-size: 20px; }
 }
 
 .brand { max-width: 78%; line-height: 1.15; }
@@ -186,16 +186,16 @@ body { font-size: 22px; }
 @media (max-width: 820px) {
   .brand { max-width: none; }
   .brand > span:last-child { display: none; }
-  .brand::after { content: "16.5 + 16.6"; font-size: 22px; font-weight: 700; letter-spacing: -.04em; }
+  .brand::after { content: "16.5 + 16.6"; font-size: 20px; font-weight: 700; letter-spacing: -.04em; }
   .score-pill { white-space: nowrap; }
 }
 
 /* Final minimum-size guard for auxiliary visible text. */
-.chapter-num { font-size: 22px; }
+.chapter-num { font-size: 20px; }
 .chapter-link.complete .chapter-num { font-size: 0; }
-.chapter-link.complete .chapter-num::after { font-size: 22px; }
-.rich-copy code, .inline-code { font-size: 22px; line-height: 1.35; }
-.code-block { font-size: 22px; line-height: 1.55; }
+.chapter-link.complete .chapter-num::after { font-size: 20px; }
+.rich-copy code, .inline-code { font-size: 20px; line-height: 1.35; }
+.code-block { font-size: 20px; line-height: 1.55; }
 
 .course-opening { display: block; }
 .opening-heading { max-width: 860px; }
@@ -208,9 +208,9 @@ body { font-size: 22px; }
 
 .source-gallery { max-width: var(--content); margin: 42px auto 0; padding: 0 42px 30px; border-bottom: 1px solid var(--line); }
 .source-gallery h2 { margin: 10px 0 6px; font: 700 34px/1.1 "Space Grotesk", sans-serif; letter-spacing: -.05em; }
-.source-gallery > p { margin: 0 0 22px; color: var(--ink-soft); font-size: 22px; }
+.source-gallery > p { margin: 0 0 20px; color: var(--ink-soft); font-size: 20px; }
 .source-gallery-grid { display: grid; gap: 28px; }
 .source-gallery figure { margin: 0; padding: 18px; border-radius: 16px; background: var(--white); border: 1px solid var(--line); }
 .source-gallery img { display: block; width: 100%; height: auto; max-height: none; object-fit: contain; }
-.source-gallery figcaption { margin-top: 14px; color: var(--ink-soft); font-size: 22px; }
+.source-gallery figcaption { margin-top: 14px; color: var(--ink-soft); font-size: 20px; }
 @media (max-width: 820px) { .source-gallery { padding-left: 26px; padding-right: 26px; } }
