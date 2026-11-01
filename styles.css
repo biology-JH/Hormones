@@ -196,3 +196,12 @@ body { font-size: 22px; }
 .chapter-link.complete .chapter-num::after { font-size: 22px; }
 .rich-copy code, .inline-code { font-size: 22px; line-height: 1.35; }
 .code-block { font-size: 22px; line-height: 1.55; }
+
+.course-opening { display: block; }
+.opening-heading { max-width: 860px; }
+.opening-heading h2 { margin-top: 12px; }
+.opening-objectives { margin: 28px 0; }
+.global-starter { margin-bottom: 0; }
+.source-visual { max-height: none; }
+.final-plenary { max-width: var(--content); margin: 46px auto 0; }
+.final-plenary h2 { margin: 8px 0; font: 700 34px/1.1 "Space Grotesk", sans-serif; letter-spacing: -.05em; }

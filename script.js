@@ -211,13 +211,10 @@ function renderQuestions(questions, sessionId) { return questions.map((q, index)
 function renderSession(session) {
   return `<section class="session" id="session-${session.id}" data-session="${session.id}">
     <div class="session-heading"><div class="session-number">0${session.id}</div><div><div class="eyebrow">Session ${session.id} · ${session.id <= 2 || session.id >= 5 ? "core" : "extended"}</div><h2 class="session-title">${session.title}</h2><p class="session-deck">${session.deck}</p></div><div class="session-status"><button class="complete-toggle" type="button" data-complete="${session.id}" aria-pressed="false"><span class="checkmark">✓</span><span>Mark complete</span></button></div></div>
-    <div class="objectives"><article class="objective what"><span class="objective-label">What</span><h3>The concept</h3><p>${session.what}</p></article><article class="objective why"><span class="objective-label">Why</span><h3>The reason</h3><p>${session.why}</p></article><article class="objective how"><span class="objective-label">How</span><h3>The process</h3><p>${session.how}</p></article></div>
-    <div class="starter"><span class="mini-label">Starter activity</span><h3>Activate the biology.</h3><p>${session.starter}</p></div>
     <div class="content-block core-block"><div class="block-heading"><h3>Detailed content</h3><span class="badge badge-core">${session.id <= 2 || session.id >= 5 ? "CORE" : "EXTENDED"}</span></div><div class="rich-copy">${paragraphize(session.core)}</div></div>
     <div class="content-block extended-block"><div class="block-heading"><h3>Stretch the model</h3><span class="badge badge-extended">EXTENDED</span></div><div class="rich-copy"><p>${session.extended}</p></div></div>
     ${renderVisuals(session.visuals, session.id)}
     <div class="practice"><div class="practice-heading"><div><span class="section-kicker">Retrieval practice</span><h3>Make the biology do some work.</h3></div><span class="practice-score" data-session-score="${session.id}">0 / ${session.questions.length} correct</span></div><div class="question-list">${renderQuestions(session.questions, session.id)}</div></div>
-    <div class="plenary"><span class="mini-label">Plenary · session ${session.id}</span><h3>Close the loop.</h3><p>Check the statements you can now defend. Then leave yourself one useful note.</p><div class="plenary-list">${session.plenary.map((item, index) => `<label class="check-row"><input type="checkbox" data-reflection="${session.id}-${index}" /> <span>${item}</span></label>`).join("")}<textarea class="exit-ticket" data-exit="${session.id}" placeholder="${session.exit}"></textarea></div></div>
   </section>`;
 }
 
@@ -243,6 +240,11 @@ sessionsEl.addEventListener("click", event => {
 sessionsEl.addEventListener("change", event => { const check = event.target.closest("[data-reflection]"); if (check) saveReflection(check.dataset.reflection, check.checked); });
 sessionsEl.addEventListener("input", event => { const exit = event.target.closest("[data-exit]"); if (exit) saveReflection(`exit-${exit.dataset.exit}`, exit.value); });
 Object.entries(state.reflections).forEach(([key, value]) => { const checkbox = document.querySelector(`[data-reflection="${key}"]`); if (checkbox) checkbox.checked = value === true || value === "true"; const exit = key.startsWith("exit-") ? document.querySelector(`[data-exit="${key.replace("exit-", "")}"]`) : null; if (exit) exit.value = value; });
+
+const finalPlenary = document.querySelector(".final-plenary");
+finalPlenary.addEventListener("change", event => { const check = event.target.closest("[data-global-reflection]"); if (check) saveReflection(`global-${check.dataset.globalReflection}`, check.checked); });
+finalPlenary.addEventListener("input", event => { const exit = event.target.closest("[data-global-exit]"); if (exit) saveReflection("global-exit", exit.value); });
+Object.entries(state.reflections).forEach(([key, value]) => { const checkbox = document.querySelector(`[data-global-reflection="${key.replace("global-", "")}"]`); if (checkbox) checkbox.checked = value === true || value === "true"; if (key === "global-exit") { const exit = document.querySelector("[data-global-exit]"); if (exit) exit.value = value; } });
 
 document.querySelector(".menu-toggle").addEventListener("click", event => { const open = document.body.classList.toggle("nav-open"); document.querySelector(".course-rail").classList.toggle("is-open", open); event.currentTarget.setAttribute("aria-expanded", String(open)); });
 document.querySelector(".course-rail").addEventListener("click", event => { if (event.target.closest(".chapter-link")) { document.body.classList.remove("nav-open"); document.querySelector(".course-rail").classList.remove("is-open"); document.querySelector(".menu-toggle").setAttribute("aria-expanded", "false"); } });
