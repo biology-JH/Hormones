@@ -192,7 +192,17 @@ const sessionsEl = document.querySelector("#sessions");
 const chapterListEl = document.querySelector("#chapter-list");
 
 function paragraphize(items) { return items.map(item => `<p>${item}</p>`).join(""); }
-function renderVisuals(items) { return items.map((item, index) => `<div class="visual-placeholder"><div class="placeholder-inner"><div class="placeholder-icon" aria-hidden="true">${index % 2 ? "◫" : "⌁"}</div><div><span class="mini-label">Source visual ${index + 1}</span><h4>${item}</h4><p>Diagram / picture placeholder — replace this block with the corresponding visual from the supplied study guide at this exact context point.</p></div></div></div>`).join(""); }
+const sourceImages = {
+  1: ["/source-images/image2.png", null],
+  2: ["/source-images/image3.png", null, null],
+  3: ["/source-images/image4.png", "/source-images/image5.png", null],
+  4: [null, null, null],
+  5: ["/source-images/image6.png", null],
+  6: ["/source-images/image6.png", null],
+  7: [null, null, null],
+  8: [null, null, null]
+};
+function renderVisuals(items, sessionId) { return items.map((item, index) => { const image = sourceImages[sessionId]?.[index]; return `<div class="visual-placeholder"><div class="placeholder-inner"><div class="placeholder-icon" aria-hidden="true">${index % 2 ? "◫" : "⌁"}</div>${image ? `<img class="source-visual" src="${image}" alt="Source visual from the uploaded study guide" />` : ""}<div><span class="mini-label">Source visual ${index + 1}</span><h4>${item}</h4><p class="source-visual-caption">${image ? "Visual extracted from the uploaded Word document and enlarged for study." : "Diagram / picture placeholder — place the corresponding visual from the supplied study guide here at this exact context point."}</p></div></div></div>`; }).join(""); }
 function renderQuestions(questions, sessionId) { return questions.map((q, index) => {
   const qid = `s${sessionId}q${index}`;
   if (q.type === "short") return `<article class="question-card" data-question="${qid}" data-answer="${q.answers.join("|")}"><span class="question-label">Check ${index + 1} · short answer</span><p class="question-prompt">${q.prompt}</p><div class="short-answer"><input aria-label="Answer for check ${index + 1}" data-input="${qid}" /><button type="button" data-submit="${qid}">Check</button></div><div class="feedback" data-feedback="${qid}" role="status"></div></article>`;
@@ -205,7 +215,7 @@ function renderSession(session) {
     <div class="starter"><span class="mini-label">Starter activity</span><h3>Activate the biology.</h3><p>${session.starter}</p></div>
     <div class="content-block core-block"><div class="block-heading"><h3>Detailed content</h3><span class="badge badge-core">${session.id <= 2 || session.id >= 5 ? "CORE" : "EXTENDED"}</span></div><div class="rich-copy">${paragraphize(session.core)}</div></div>
     <div class="content-block extended-block"><div class="block-heading"><h3>Stretch the model</h3><span class="badge badge-extended">EXTENDED</span></div><div class="rich-copy"><p>${session.extended}</p></div></div>
-    ${renderVisuals(session.visuals)}
+    ${renderVisuals(session.visuals, session.id)}
     <div class="practice"><div class="practice-heading"><div><span class="section-kicker">Retrieval practice</span><h3>Make the biology do some work.</h3></div><span class="practice-score" data-session-score="${session.id}">0 / ${session.questions.length} correct</span></div><div class="question-list">${renderQuestions(session.questions, session.id)}</div></div>
     <div class="plenary"><span class="mini-label">Plenary · session ${session.id}</span><h3>Close the loop.</h3><p>Check the statements you can now defend. Then leave yourself one useful note.</p><div class="plenary-list">${session.plenary.map((item, index) => `<label class="check-row"><input type="checkbox" data-reflection="${session.id}-${index}" /> <span>${item}</span></label>`).join("")}<textarea class="exit-ticket" data-exit="${session.id}" placeholder="${session.exit}"></textarea></div></div>
   </section>`;

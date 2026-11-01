@@ -8,7 +8,8 @@ const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=
 
 function safePath(urlPath) {
   const decoded = decodeURIComponent(urlPath.split('?')[0]);
-  const relative = decoded === '/' ? 'index.html' : decoded.replace(/^\/+/, '');
+  let relative = decoded === '/' ? 'index.html' : decoded.replace(/^\/+/, '');
+  if (relative.startsWith('source-images/')) relative = path.join('public', relative);
   const file = path.normalize(path.join(root, relative));
   return file.startsWith(root) ? file : null;
 }

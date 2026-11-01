@@ -1,7 +1,7 @@
-# LearnLane Biology implementation plan
+# 16.5 Sex Hormones in Humans and 16.6 Sexually Transmitted Infections — implementation plan
 
 ## Product scope
-LearnLane Biology is a self-contained, static educational website built from the uploaded `IGCSE-Biology-Study-Guide-16_5-Sex-Hormones-in-Humans-merged.docx`. The source contains the complete 16.5 Sex Hormones in Humans section and the included 16.6 Sexually Transmitted Infections section. The website keeps the guide's order and turns its tables, diagrams, and exam tips into an interactive eight-session learning path.
+The website is a self-contained, static educational site built from the uploaded Word guide. It uses the exact name `16.5 Sex Hormones in Humans and 16.6 Sexually Transmitted Infections`, keeps the guide's order, presents concise explanations, and turns its tables, diagrams, and exam tips into an interactive eight-session learning path.
 
 ## Design direction
 
@@ -29,7 +29,7 @@ LearnLane Biology is a self-contained, static educational website built from the
 - `styles.css`: responsive editorial system, CORE/EXTENDED badges, source visual placeholder cards, feedback states, focus styles, and reduced-motion rules.
 - `script.js`: source-grounded session data, chapter navigation, question grading, score counter, progress tracking, mobile nav drawer, and session-scoped reflection state.
 - `public/manus-routes.json`: static route manifest for the root page.
-- `public/biology-hero.jpg`: requested location for the generated hero; the managed image asset is referenced at the exact storage URL returned by the image tool.
+- `public/source-images/image1.png` through `image6.png`: extracted pictures from the uploaded Word document, reused as the large hero and contextual lesson visuals.
 
 ## Chronological curriculum
 1. Puberty and secondary sexual characteristics (Core).
@@ -44,4 +44,4 @@ LearnLane Biology is a self-contained, static educational website built from the
 Every session includes the requested WWH objectives, starter activity, detailed content, one or more contextual placeholders for the source document's visuals, three interactive questions with instant feedback, and a plenary checklist plus exit ticket.
 
 ## Serving and delivery
-This is a static project with no database or server-side application state. The app listens on port 3000, exposes `/manus-routes.json`, and is served by a minimal Node static server for Preview. The build declaration outputs a clean `dist` directory via `npm run build`; publication remains separate from checkpointing.
+This is a static project with no database or server-side application state. The app listens on port 3000, exposes `/manus-routes.json`, and is served by a minimal Node static server for Preview. The build declaration outputs a clean `dist` directory via `npm run build`; publication remains separate from checkpointing. Visible text is set to a minimum 22px reading scale, and source pictures are enlarged responsively within the article width.

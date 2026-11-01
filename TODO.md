@@ -1,4 +1,4 @@
-# LearnLane Biology delivery outcomes
+# 16.5 Sex Hormones in Humans and 16.6 Sexually Transmitted Infections — delivery outcomes
 
 ## 1. Source-grounded chronology
 - The website follows the uploaded guide in order across eight sessions, covering 16.5 Sex Hormones in Humans and the included 16.6 Sexually Transmitted Infections section.
@@ -12,8 +12,10 @@
 - Source tables and diagrams are explicitly placed at the exact lesson context where the supplied document introduces them.
 
 ## 3. Visual and responsive interface
+- The website name and page title are exactly `16.5 Sex Hormones in Humans and 16.6 Sexually Transmitted Infections`.
 - The UI is clean, modern, responsive, and readable on desktop, tablet, and mobile.
-- One wide biology header picture spans the same editorial width as the article content.
+- The supplied Word-document pictures are extracted, reused at the relevant lesson points, and displayed as large as the responsive article width permits.
+- Visible typography uses a minimum 22px size.
 - A sticky desktop sidebar and mobile navigation drawer show the chronological chapter flow.
 
 ## 4. Dynamic practice and progress
