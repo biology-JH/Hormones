@@ -1,9 +1,0 @@
-{
-  "name": "learnlane",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node server.js",
-    "build": "rm -rf dist && mkdir -p dist && cp index.html styles.css script.js dist/ && cp -r public/* dist/"
-  }
-}
