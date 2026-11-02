@@ -1,26 +1,25 @@
 {
   "origin": "https://learnlane-8qjdszjn.manus.space",
   "baseline_checkpoint": "698d731b346086cc714fd0b3b8d0c8354f8246b2",
-  "image_source": "User-provided Human Placental Structure and Maternal-Foetal Exchange PDF; rendered at 160 DPI and cropped to figure bounds.",
   "note": "This manifest describes the current repository files, not the original live export.",
   "files": {
     "index.html": {
       "remote": "/",
       "content_type": "text/html; charset=utf-8",
-      "sha256": "3d75d7d6509b930037eef46d9311e6b26aaf12fdc152d648bd403afb75e56578",
-      "bytes": 8369
+      "sha256": "9f6fc1b67af9dcf2eccad7c6bef435a41bf576acafd63ea294272b419560a92e",
+      "bytes": 7871
     },
     "styles.css": {
-      "remote": "/styles.css?v=pdf-figures-1",
+      "remote": "/styles.css?v=hero-clean-1",
       "content_type": "text/css; charset=utf-8",
-      "sha256": "265910f5d5b160a4440a69ff1de4e58e84ed8ea51521e80207cd1fbb6e867a08",
-      "bytes": 20508
+      "sha256": "5124cd87e7c405118ef9bfd08ccb77504c970f1ecab62287ed1262460bb48617",
+      "bytes": 20328
     },
     "script.js": {
-      "remote": "/script.js?v=pdf-figures-1",
+      "remote": "/script.js?v=hero-clean-1",
       "content_type": "text/javascript; charset=utf-8",
-      "sha256": "77f902e81a283ced30ed5d778475343813e20078833a45e8931025cba469f115",
-      "bytes": 47610
+      "sha256": "9cf2b75dbcf713c189b05e5684db97e9f724e402f495ea8ee58f4edce53d9984",
+      "bytes": 47559
     },
     "manus-routes.json": {
       "remote": "/manus-routes.json",
@@ -29,49 +28,49 @@
       "bytes": 105
     },
     "images/hiv-particle-structure.png": {
-      "remote": "/images/hiv-particle-structure.png?v=pdf-figures-1",
+      "remote": "/images/hiv-particle-structure.png",
       "content_type": "image/png",
       "sha256": "c5db01dd306954f542cc24ae131628b59d3465e3b3154461c7aaaedfd9947c5b",
       "bytes": 697533
     },
-    "images/hormone-control-axis.png": {
-      "remote": "/images/hormone-control-axis.png?v=pdf-figures-1",
-      "content_type": "image/png",
-      "sha256": "0ceca67d75244e79f821d562331438da815a83346a0c8752b9a7d1f8a459045d",
-      "bytes": 273647
-    },
     "images/hormone-patterns-cycle.png": {
-      "remote": "/images/hormone-patterns-cycle.png?v=pdf-figures-1",
+      "remote": "/images/hormone-patterns-cycle.png",
       "content_type": "image/png",
       "sha256": "07cc3e61a24938ffcf1ccf678500e8b6eb6ff7a660a8dbdc5aae68f1e2388048",
       "bytes": 305866
     },
     "images/menstrual-cycle.png": {
-      "remote": "/images/menstrual-cycle.png?v=pdf-figures-1",
+      "remote": "/images/menstrual-cycle.png",
       "content_type": "image/png",
       "sha256": "c7807b7e0662610666413180efa047c9a8f0a78404775fcfa60217f4fbdd8d64",
       "bytes": 457585
     },
     "images/placental-structure-exchange.png": {
-      "remote": "/images/placental-structure-exchange.png?v=pdf-figures-1",
+      "remote": "/images/placental-structure-exchange.png",
       "content_type": "image/png",
       "sha256": "a7b17f1204e8dd1de1f706f05521f6befc9af22509618720acb6ffda8f258646",
       "bytes": 1004285
     },
     "images/pregnancy-sti-prevention.png": {
-      "remote": "/images/pregnancy-sti-prevention.png?v=pdf-figures-1",
+      "remote": "/images/pregnancy-sti-prevention.png",
       "content_type": "image/png",
       "sha256": "328cb653fd5335bc726f143f382f71b6f9c052f6ca99154ad874d62fdef48c16",
       "bytes": 846193
     },
+    "images/reproductive-health-header.webp": {
+      "remote": "/images/reproductive-health-header.webp?v=hero-clean-1",
+      "content_type": "image/webp",
+      "sha256": "dc6b02bb708adb6cd5444cccbc03a9ed00c33020ed3cedeb3a511a768c97e3ed",
+      "bytes": 361644
+    },
     "images/sti-infant-outcomes.png": {
-      "remote": "/images/sti-infant-outcomes.png?v=pdf-figures-1",
+      "remote": "/images/sti-infant-outcomes.png",
       "content_type": "image/png",
       "sha256": "3e1f96f5a4832f31ba33b3a6aefc7249550fd1513f7fbfcd791f5dc3ecf45418",
       "bytes": 1056114
     },
     "images/vertical-transmission-routes.png": {
-      "remote": "/images/vertical-transmission-routes.png?v=pdf-figures-1",
+      "remote": "/images/vertical-transmission-routes.png",
       "content_type": "image/png",
       "sha256": "3e9793656f395b37e762d6a627ca691bf36ef2bddc86022c07a471cc2cf87849",
       "bytes": 763193

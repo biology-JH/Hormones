@@ -195,9 +195,9 @@ const sourceImages = {
   1: [],
   2: [{ src: "/images/menstrual-cycle.png", alt: "Ovarian follicle development, egg release, corpus luteum formation, and corresponding uterine-lining changes across the menstrual cycle.", caption: "Ovarian events and uterine-lining changes progress together through the cycle." }],
   3: [{ src: "/images/hormone-patterns-cycle.png", alt: "Graph of relative oestrogen, LH, FSH, and progesterone levels across follicular, ovulatory, and luteal phases.", caption: "Hormone levels shift across the cycle; timing varies between individuals." }],
-  4: [{ src: "/images/placental-structure-exchange.png", alt: "Placental structure showing the fetus and umbilical cord, placental disc, chorionic villi, maternal blood vessels, and fetal exchange layers.", caption: "The first figure from the supplied PDF shows placental structure and the maternal–fetal exchange interface." }],
+  4: [{ src: "/images/placental-structure-exchange.png", alt: "Placental structure showing the fetus and umbilical cord, placental disc, chorionic villi, maternal blood vessels, and fetal exchange layers.", caption: "Placental structure and the maternal–fetal exchange interface." }],
   5: [
-    { src: "/images/hiv-particle-structure.png", alt: "HIV particle with its envelope, gp120 and gp41 spikes, matrix layer, conical capsid, RNA copies, and reverse transcriptase.", caption: "The PDF's labelled HIV particle identifies the envelope, genetic material, and key internal structures." },
+    { src: "/images/hiv-particle-structure.png", alt: "HIV particle with its envelope, gp120 and gp41 spikes, matrix layer, conical capsid, RNA copies, and reverse transcriptase.", caption: "The labelled HIV particle identifies the envelope, genetic material, and key internal structures." },
     { src: "/images/sti-infant-outcomes.png", alt: "Table of selected STI pathogens and possible infant outcomes, including syphilis, HIV, hepatitis B, chlamydia, gonorrhoea, and genital herpes.", caption: "Possible infant outcomes differ by infection and are not inevitable." }
   ],
   6: [{ src: "/images/vertical-transmission-routes.png", alt: "Possible infection-specific routes to an infant during pregnancy, labour and birth, or after birth.", caption: "Routes vary by infection; not all STIs cross the placenta." }],
