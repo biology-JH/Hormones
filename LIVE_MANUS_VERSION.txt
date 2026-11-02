@@ -1,3 +1,4 @@
-Live origin: https://learnlane-8qjdszjn.manus.space
-Published checkpoint: 698d731b346086cc714fd0b3b8d0c8354f8246b2
-This package was downloaded from the live Manus origin, not copied from local Preview.
+Baseline live origin: https://learnlane-8qjdszjn.manus.space
+Baseline published checkpoint: 698d731b346086cc714fd0b3b8d0c8354f8246b2
+
+This repository has since been updated with replacement figures rendered from the user-provided Human Placental Structure and Maternal-Foetal Exchange PDF. See LIVE_ASSET_MANIFEST.json for hashes and paths of the current deployed files.

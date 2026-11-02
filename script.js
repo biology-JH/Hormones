@@ -190,19 +190,28 @@ const sessions = [
 const state = { score: 0, answered: new Set(), completed: new Set(), reflections: JSON.parse(sessionStorage.getItem("learnlane-reflections") || "{}") };
 const sessionsEl = document.querySelector("#sessions");
 const chapterListEl = document.querySelector("#chapter-list");
-
 function paragraphize(items) { return items.map(item => `<p>${item}</p>`).join(""); }
 const sourceImages = {
-  1: ["/ppt-images/image-6-2.png"],
-  2: ["/ppt-images/image-9-2.png", "/ppt-images/image-9-3.png", "/ppt-images/image-9-4.png"],
-  3: ["/ppt-images/image-14-2.png", "/ppt-images/image-16-2.png"],
-  4: ["/ppt-images/image-18-2.png"],
-  5: ["/ppt-sti-images/image-1-2.jpg", "/ppt-sti-images/image-11-2.png"],
-  6: ["/ppt-sti-images/image-12-2.png"],
-  7: ["/ppt-sti-images/image-17-2.png"],
-  8: ["/ppt-sti-images/image-25-2.png", "/ppt-sti-images/image-11-2.png"]
+  1: [],
+  2: [{ src: "/images/menstrual-cycle.png", alt: "Ovarian follicle development, egg release, corpus luteum formation, and corresponding uterine-lining changes across the menstrual cycle.", caption: "Ovarian events and uterine-lining changes progress together through the cycle." }],
+  3: [{ src: "/images/hormone-patterns-cycle.png", alt: "Graph of relative oestrogen, LH, FSH, and progesterone levels across follicular, ovulatory, and luteal phases.", caption: "Hormone levels shift across the cycle; timing varies between individuals." }],
+  4: [{ src: "/images/placental-structure-exchange.png", alt: "Placental structure showing the fetus and umbilical cord, placental disc, chorionic villi, maternal blood vessels, and fetal exchange layers.", caption: "The first figure from the supplied PDF shows placental structure and the maternal–fetal exchange interface." }],
+  5: [
+    { src: "/images/hiv-particle-structure.png", alt: "HIV particle with its envelope, gp120 and gp41 spikes, matrix layer, conical capsid, RNA copies, and reverse transcriptase.", caption: "The PDF's labelled HIV particle identifies the envelope, genetic material, and key internal structures." },
+    { src: "/images/sti-infant-outcomes.png", alt: "Table of selected STI pathogens and possible infant outcomes, including syphilis, HIV, hepatitis B, chlamydia, gonorrhoea, and genital herpes.", caption: "Possible infant outcomes differ by infection and are not inevitable." }
+  ],
+  6: [{ src: "/images/vertical-transmission-routes.png", alt: "Possible infection-specific routes to an infant during pregnancy, labour and birth, or after birth.", caption: "Routes vary by infection; not all STIs cross the placenta." }],
+  7: [{ src: "/images/pregnancy-sti-prevention.png", alt: "Pregnancy STI prevention flowchart linking safer sex, screening, infection-specific care, partner testing, and treatment.", caption: "Prevention combines safer sex, screening, infection-specific care, partner testing, and treatment." }],
+  8: []
 };
-function renderVisuals(items, sessionId) { return (sourceImages[sessionId] || []).map(image => `<div class="visual-placeholder"><div class="placeholder-inner"><img class="source-visual" src="${image}" alt="Biology slide diagram" /></div></div>`).join(""); }
+function renderVisuals(items, sessionId) {
+  return (sourceImages[sessionId] || []).map(({ src, alt, caption }) =>
+    `<figure class="visual-placeholder">
+      <img class="source-visual" src="${src}?v=pdf-figures-1" alt="${alt}" loading="lazy" decoding="async" />
+      <figcaption class="source-visual-caption">${caption}</figcaption>
+    </figure>`
+  ).join("");
+}
 function renderQuestions(questions, sessionId) { return questions.map((q, index) => {
   const qid = `s${sessionId}q${index}`;
   if (q.type === "short") return `<article class="question-card" data-question="${qid}" data-answer="${q.answers.join("|")}"><span class="question-label">Check ${index + 1} · short answer</span><p class="question-prompt">${q.prompt}</p><div class="short-answer"><input aria-label="Answer for check ${index + 1}" data-input="${qid}" /><button type="button" data-submit="${qid}">Check</button></div><div class="feedback" data-feedback="${qid}" role="status"></div></article>`;
