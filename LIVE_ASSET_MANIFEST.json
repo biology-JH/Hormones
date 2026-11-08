@@ -6,14 +6,14 @@
     "index.html": {
       "remote": "/",
       "content_type": "text/html; charset=utf-8",
-      "sha256": "a1c998986923cd9bdc86f62ff46043fcb83e6c8419961d3f20eb0324fb582d9f",
-      "bytes": 11203
+      "sha256": "cf19d7adae695b1e41ec7b8ee17bfbaa9508adbdc3652d3ae838936048660439",
+      "bytes": 11176
     },
     "styles.css": {
-      "remote": "/styles.css?v=glossary-2",
+      "remote": "/styles.css?v=header-docx-2",
       "content_type": "text/css; charset=utf-8",
-      "sha256": "e46d280c682b5c1732282ac5111848075bac74213dd553622fabbed0c529af17",
-      "bytes": 22233
+      "sha256": "4ea71c2b193c4ee1fc5904b0234588f1a5fed0d231303624edec42734ccac836",
+      "bytes": 22412
     },
     "script.js": {
       "remote": "/script.js?v=hero-clean-1",
@@ -57,11 +57,11 @@
       "sha256": "328cb653fd5335bc726f143f382f71b6f9c052f6ca99154ad874d62fdef48c16",
       "bytes": 846193
     },
-    "images/reproductive-health-header.webp": {
-      "remote": "/images/reproductive-health-header.webp?v=hero-clean-1",
+    "images/sex-hormones-infections-header.webp": {
+      "remote": "/images/sex-hormones-infections-header.webp?v=docx-header-1",
       "content_type": "image/webp",
-      "sha256": "dc6b02bb708adb6cd5444cccbc03a9ed00c33020ed3cedeb3a511a768c97e3ed",
-      "bytes": 361644
+      "sha256": "25810f5788d999c22bb7bc97790302e1122026ea24bfea3b9eec9c659e1755ea",
+      "bytes": 92784
     },
     "images/sti-infant-outcomes.png": {
       "remote": "/images/sti-infant-outcomes.png",
