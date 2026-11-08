@@ -192,6 +192,7 @@ body { font-size: 20px; }
 .key-term dt, .key-term dd { margin: 0; font-size: 24px; line-height: 1.3; overflow-wrap: anywhere; }
 .key-term dt { font-weight: 700; }
 .key-term dd { text-align: right; color: var(--ink-soft); font-family: "DM Sans", "Noto Sans TC", sans-serif; }
+.key-term-long dt, .key-term-long dd { font-size: 20px; }
 @media (max-width: 820px) { .key-terms { padding-left: 26px; padding-right: 26px; }.key-terms-groups { gap: 12px; }.key-terms-group { padding: 14px; }.key-term { grid-template-columns: minmax(0, 1fr); gap: 1px; }.key-term dd { text-align: left; } }
 @media (max-width: 540px) { .key-terms { padding-left: 18px; padding-right: 18px; }.key-terms-groups { grid-template-columns: 1fr; }.key-terms-heading h2 { font-size: 27px; }.key-terms-heading h2 span { font-size: 24px; }.key-term { grid-template-columns: minmax(0, 1fr); gap: 1px; }.key-term dd { text-align: left; } }
 @media (max-width: 820px) {

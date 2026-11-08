@@ -6,14 +6,14 @@
     "index.html": {
       "remote": "/",
       "content_type": "text/html; charset=utf-8",
-      "sha256": "471972eb7a104a62f2cba0b116538d4b763f00b206ef21bc7bbade38e9b1988b",
-      "bytes": 11173
+      "sha256": "5ae8ef180bb6774aa24be3730496573d6ddf50ac2567c3f109401f1e0c599bc4",
+      "bytes": 11203
     },
     "styles.css": {
-      "remote": "/styles.css?v=header-docx-3",
+      "remote": "/styles.css?v=glossary-wrap-1",
       "content_type": "text/css; charset=utf-8",
-      "sha256": "bb7dc165800eaf0fe5853930dfcc3c3fdb678191f578f631418659f6dbd27b50",
-      "bytes": 22572
+      "sha256": "14f9b41b07faa3efde39e701bc97d6602dc9c3a6c2c15cf07086f65827420882",
+      "bytes": 22630
     },
     "script.js": {
       "remote": "/script.js?v=hero-clean-1",
