@@ -6,14 +6,14 @@
     "index.html": {
       "remote": "/",
       "content_type": "text/html; charset=utf-8",
-      "sha256": "daf7010981bcd8e7061335cf2f4ac92e6d75f11102f2272ec9e7f9651f07e173",
-      "bytes": 7861
+      "sha256": "a1c998986923cd9bdc86f62ff46043fcb83e6c8419961d3f20eb0324fb582d9f",
+      "bytes": 11203
     },
     "styles.css": {
-      "remote": "/styles.css?v=hero-clean-3",
+      "remote": "/styles.css?v=glossary-2",
       "content_type": "text/css; charset=utf-8",
-      "sha256": "7d14df2e5a22ab523eee00205684c24be6362dada57b7d5ef2398e2d1a9e3d3b",
-      "bytes": 20399
+      "sha256": "e46d280c682b5c1732282ac5111848075bac74213dd553622fabbed0c529af17",
+      "bytes": 22233
     },
     "script.js": {
       "remote": "/script.js?v=hero-clean-1",
